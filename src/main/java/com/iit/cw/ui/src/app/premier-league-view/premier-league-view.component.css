@@ -1,0 +1,24 @@
+.container{
+    margin-top: 10%;
+    float: none;
+    width: auto;
+}
+
+.btn{
+    margin-inline: 1%;
+    display:inline-block;
+}
+
+.buttons{
+    flex: content;
+    flex-direction: row;
+    float: right;
+    width:35%;
+    margin-bottom: 2%;
+    position: static;
+    display: flex;       
+}
+
+.header{
+    font-family: 'Quicksand', sans-serif;
+}

@@ -1,0 +1,97 @@
+<div class="container">
+    <!-- set up the header -->
+    <h1 class="header">Match Details Table</h1>
+
+    <br>
+    <!-- set up the buttons and forms to search function and load data function -->
+    <div class="form-group">
+
+        <form>
+            <!-- search match label -->
+            <label for="searchLable"
+
+                   class="searchForm">Search Match</label>
+
+            <!-- search match text input -->
+            <input type="date"
+
+                   [(ngModel)] = "matchDate"
+
+                   [ngModelOptions]="{standalone: true}"
+
+                   id="searchInput" class="searchForm"
+
+                   placeholder="06.02.2020">
+
+            <!-- set up search button -->
+            <button type="button"
+
+                    class="btn btn-dark mb-2 searchForm"
+
+                    (click) = "getSearchResult()">Search</button>
+
+            <!-- set up match details load button -->
+            <button type="button"
+
+                    class="btn
+
+                    btn-success
+
+                    mb-2 searchForm"
+
+                    (click) = "ngOnInit()">Back to match table</button>
+
+            <!-- for error message  -->
+
+            <small id="searchHelp"
+
+            class="form-text
+
+            text-muted"></small>
+
+        </form>
+
+    </div>
+
+    <table class="table tabel-striped">
+
+        <thead>
+            <!-- table header rows -->
+            <tr>
+                <th>Team One Name</th>
+
+                <th>Team Two Name</th>
+
+                <th>Team One Score</th>
+
+                <th>Team Two Score</th>
+
+                <th>Match Date</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <!-- table body rows -->
+            <tr *ngFor = "let match of matchList">
+
+                <td>{{ match.teamOneName }}</td>
+
+                <td>{{ match.teamTwoName }}</td>
+
+                <td>{{ match.teamOneScore }}</td>
+
+                <td>{{ match.teamTwoScore }}</td>
+
+                <td>{{ match.matchDate }}</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+<!-- calling app footer component -->
+<app-footer></app-footer>

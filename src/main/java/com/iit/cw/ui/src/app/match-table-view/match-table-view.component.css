@@ -1,0 +1,33 @@
+.container{
+    margin-top: 10%;
+    float: none;
+    width: auto;
+    
+}
+
+.form-group{
+    flex: content;
+    float:right;
+    flex-direction: row;
+    width:45%;
+    margin-bottom: 2%;
+    display: flex;     
+    white-space: nowrap;
+    margin-right: 5%;
+}
+
+.searchForm{
+    margin-inline: 1%;
+    display:inline-block;
+    
+}
+
+input[type=text] {
+    width: 40%;
+    padding: 5px;
+    margin: 10px 5px;
+    box-sizing: border-box;  
+}
+.header{
+    font-family: 'Quicksand', sans-serif;
+}

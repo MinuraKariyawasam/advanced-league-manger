@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600&display=swap');
+.mastheader {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('https://source.unsplash.com/wwARY_lWG6w/1920x1080');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+.head{
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 7px;
+  opacity: 1;
+  font-size: 65px;
+}

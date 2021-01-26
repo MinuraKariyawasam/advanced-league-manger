@@ -1,0 +1,93 @@
+<div class="container">
+    <!-- set up page header title -->
+    <h1 class="header">Premier League Table</h1>
+    <!-- set up buttons for sorting -->
+    <div class="buttons">
+        <!-- point sort button -->
+        <button type="button"
+
+                class="btn btn-dark"
+
+                (click) = "getPointSortedList()">Points</button>
+        <!-- wins sorted button -->
+        <button type="button"
+
+                class="btn btn-dark"
+
+                (click) = "getWinsSortedList()">Wins</button>
+        <!-- goal sorted button -->
+        <button type="button"
+
+                class="btn btn-dark"
+
+                (click) = "getGoalSortedList()">Goal Scored</button>
+        <!-- generate match details -->
+        <button type="button"
+
+                class="btn btn-danger"
+
+                (click) = "getGenerateList()">Generate</button>
+
+    </div>
+
+    <br>
+    <!-- premier league details table -->
+    <table class="table tabel-striped">
+    <!-- table header rows -->
+        <thead>
+
+            <tr>
+
+                <th>Club Name</th>
+
+                <th>No Matches Played</th>
+
+                <th>Wins</th>
+
+                <th>Defeats</th>
+
+                <th>Draws</th>
+
+                <th>Points</th>
+
+                <th>Goal Scored</th>
+
+                <th>Goal Received</th>
+
+                <th>Goal Difference</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+        <!-- table body rows -->
+            <tr *ngFor = "let league of premierLeague">
+
+                <td>{{ league.nameOfTheClub }}</td>
+
+                <td>{{ league.numberOfMatchesPlayed }}</td>
+
+                <td>{{ league.numberOfWinsClubAchieved }}</td>
+
+                <td>{{ league.numberOfDefeatsClubAchieved }}</td>
+
+                <td>{{ league.numberOfDrawsClubAchieved }}</td>
+
+                <td>{{ league.numberOfPointsClubAchieved }}</td>
+
+                <td>{{ league.numberOfGoalsScored }}</td>
+
+                <td>{{ league.numberOfGoalsReceived }}</td>
+
+                <td>{{ league.clubGoalDifference }}</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+<!-- calling footer component -->
+<app-footer></app-footer>
